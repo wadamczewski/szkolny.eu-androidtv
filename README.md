@@ -29,7 +29,8 @@ Twórcy Szkolny.eu piszą, że **firma Librus zabroniła im** publikowania aplik
 Dlatego ta wersja **nie jest i nie będzie publikowana** w Google Play. Jest do instalacji na własnych urządzeniach,
 do prywatnego użytku. **Może przestać działać** po zmianach po stronie Librusa.
 
-Wersja na telewizory LG (webOS): [szkolny.eu-webos](https://github.com/wadamczewski/szkolny.eu-webos).
+Inne wersje: [iOS](https://github.com/wadamczewski/szkolny.eu-iOS), [CarPlay](https://github.com/wadamczewski/szkolny.eu-carplay),
+[Android Auto](https://github.com/wadamczewski/szkolny.eu-androidauto), [LG webOS](https://github.com/wadamczewski/szkolny.eu-webos).
 
 > [!NOTE]
 > **Stan weryfikacji.** Sprawdzone: testy jednostkowe na fikcyjnych danych (11/11), logowanie na lokalnym fałszywym
