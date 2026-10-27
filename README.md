@@ -29,7 +29,7 @@ Twórcy Szkolny.eu piszą, że **firma Librus zabroniła im** publikowania aplik
 Dlatego ta wersja **nie jest i nie będzie publikowana** w Google Play. Jest do instalacji na własnych urządzeniach,
 do prywatnego użytku. **Może przestać działać** po zmianach po stronie Librusa.
 
-Wersja na telewizory LG (webOS): [dziennik-webos](https://github.com/wadamczewski/dziennik-webos).
+Wersja na telewizory LG (webOS): [szkolny.eu-webos](https://github.com/wadamczewski/szkolny.eu-webos).
 
 > [!NOTE]
 > **Stan weryfikacji.** Sprawdzone: testy jednostkowe na fikcyjnych danych (11/11), logowanie na lokalnym fałszywym
@@ -81,7 +81,7 @@ z reCAPTCHA, której nie da się wygodnie obsłużyć pilotem.
 
 ## Instalacja
 
-1. Pobierz `dziennik-androidtv-1.0.0.apk` z [Releases](https://github.com/wadamczewski/dziennik-androidtv/releases/latest).
+1. Pobierz `dziennik-androidtv-1.0.0.apk` z [Releases](https://github.com/wadamczewski/szkolny.eu-androidtv/releases/latest).
 2. Na urządzeniu z Android TV / Google TV otwórz **Ustawienia → System** (na starszych: **Ustawienia urządzenia**)
    **→ Informacje** i kliknij 7× numer kompilacji. Potem w **Opcjach programisty** włącz **Debugowanie USB** albo
    **Debugowanie bezprzewodowe**.

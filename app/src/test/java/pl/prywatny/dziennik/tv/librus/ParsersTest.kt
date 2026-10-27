@@ -126,6 +126,13 @@ class ParsersTest {
         assertEquals("Dzień dobry,\nto jest fikcyjna wiadomość testowa.", detail.text)
         assertEquals(listOf(MessageAttachment("555", "111111", "regulamin.pdf")), detail.attachments)
 
+        // Real Synergia pages omit optional end tags (</td>, </tr>); the parser must cope like iOS.
+        val optional = SynergiaParser.messageList(text("inbox-optional-end-tags.html"), MessageFolder.INBOX)
+        assertEquals(listOf("333333", "444444"), optional.map { it.id })
+        assertEquals("Zebranie klasowe", optional[0].subject)
+        assertTrue(optional[0].unread && optional[0].hasAttachments)
+        assertFalse(optional[1].unread || optional[1].hasAttachments)
+
         assertFalse(SynergiaParser.isLoggedOut(text("inbox.html")))
         assertTrue(SynergiaParser.isLoggedOut("<a href=\"/loguj/portalRodzina\">Zaloguj</a>"))
     }
