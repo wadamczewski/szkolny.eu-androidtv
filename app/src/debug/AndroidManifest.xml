@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug builds only: lets tools/screenshots.sh render the app at 4K (see ScreenshotProvider). -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <provider
+            android:name=".debug.ScreenshotProvider"
+            android:authorities="${applicationId}.screenshots"
+            android:exported="false" />
+    </application>
+</manifest>

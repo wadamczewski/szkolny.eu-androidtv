@@ -13,6 +13,10 @@
 ![Licencja](https://img.shields.io/badge/licencja-GPL--3.0-blue?style=for-the-badge&logo=gnu&logoColor=white)
 ![Status](https://img.shields.io/badge/status-beta-yellowgreen?style=for-the-badge)
 
+<br>
+
+<img src="screenshots/02-start.png" width="100%" alt="Ekran Start w trybie demonstracyjnym">
+
 </div>
 
 ## Ważna informacja
@@ -31,6 +35,19 @@ Wersja na telewizory LG (webOS): [dziennik-webos](https://github.com/wadamczewsk
 > **Stan weryfikacji.** Sprawdzone: testy jednostkowe na fikcyjnych danych (11/11), logowanie na lokalnym fałszywym
 > serwerze, wszystkie ekrany w emulatorze Android TV 14 w trybie demo. **Nie sprawdzone:** logowanie na prawdziwym
 > koncie (ścieżka logowania jest ta sama co w działającej wersji iOS) i instalacja na fizycznym urządzeniu.
+
+## Zrzuty ekranu
+
+Zrzuty w 4K (3840×2160) z emulatora Android TV 14 (interfejs 1920×1080 wyrenderowany w skali 2×), w trybie demonstracyjnym. **Wszystkie dane na zrzutach są fikcyjne.**
+Kliknij obrazek, żeby zobaczyć pełną rozdzielczość.
+
+<table>
+<tr><td width="50%"><a href="screenshots/02-start.png"><img src="screenshots/02-start.png" alt="Start: plan na dziś, szczęśliwy numerek, terminarz, oceny"></a><br><sub>Start: plan na dziś, szczęśliwy numerek, terminarz, oceny</sub></td><td width="50%"><a href="screenshots/03-plan-lekcji.png"><img src="screenshots/03-plan-lekcji.png" alt="Plan lekcji z zastępstwami i odwołanymi lekcjami"></a><br><sub>Plan lekcji z zastępstwami i odwołanymi lekcjami</sub></td></tr>
+<tr><td width="50%"><a href="screenshots/04-oceny.png"><img src="screenshots/04-oceny.png" alt="Oceny ze średnimi ważonymi"></a><br><sub>Oceny ze średnimi ważonymi</sub></td><td width="50%"><a href="screenshots/05-terminarz.png"><img src="screenshots/05-terminarz.png" alt="Terminarz"></a><br><sub>Terminarz</sub></td></tr>
+<tr><td width="50%"><a href="screenshots/06-frekwencja.png"><img src="screenshots/06-frekwencja.png" alt="Frekwencja"></a><br><sub>Frekwencja</sub></td><td width="50%"><a href="screenshots/07-wiadomosci.png"><img src="screenshots/07-wiadomosci.png" alt="Wiadomości"></a><br><sub>Wiadomości</sub></td></tr>
+<tr><td width="50%"><a href="screenshots/08-wiadomosc.png"><img src="screenshots/08-wiadomosc.png" alt="Czytanie wiadomości"></a><br><sub>Czytanie wiadomości</sub></td><td width="50%"><a href="screenshots/09-konto.png"><img src="screenshots/09-konto.png" alt="Uczniowie i ustawienia"></a><br><sub>Uczniowie i ustawienia</sub></td></tr>
+<tr><td width="50%"><a href="screenshots/01-logowanie.png"><img src="screenshots/01-logowanie.png" alt="Logowanie loginem Synergii"></a><br><sub>Logowanie loginem Synergii</sub></td></tr>
+</table>
 
 ## Funkcje
 
@@ -98,6 +115,10 @@ dane fikcyjne):
 ./gradlew testDebugUnitTest
 ```
 
+Zrzuty ekranu do README robi `./tools/screenshots.sh` na uruchomionym emulatorze Android TV (build debug, tryb demo).
+Android TV ogranicza interfejs do 1080p także na ekranach 4K, dlatego skrypt renderuje okna aplikacji w skali 2×
+narzędziem dostępnym tylko w buildzie debug (`app/src/debug`). Wersja release go nie zawiera.
+
 <details>
 <summary>Struktura projektu</summary>
 
@@ -107,7 +128,10 @@ app/src/main/java/pl/prywatny/dziennik/tv/
   data/     konta (szyfrowane kluczem Android Keystore) i pamięć podręczna danych
   ui/       ekrany Compose for TV: menu, Start, plan, oceny, terminarz, frekwencja, wiadomości, konto
 app/src/test/  testy jednostkowe
+app/src/debug/ zrzuty ekranu w 4K (tylko build debug)
 fixtures/      fikcyjne odpowiedzi Librusa używane w testach
+screenshots/   zrzuty ekranu do README (dane fikcyjne)
+tools/         screenshots.sh
 ```
 
 </details>
